@@ -2,6 +2,7 @@ package com.example.designdemo;
 
 import com.example.designdemo.factory.Shape;
 import com.example.designdemo.factory.ShapeFactory;
+import com.example.designdemo.proxy.real.ProxyImage;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -39,4 +40,14 @@ class DesignDemoApplicationTests {
         //调用 Square 的 draw 方法
         shape3.draw();
     }
+
+    /**
+     * 代理模式
+     */
+    @Test
+    void proxyTest() {
+        ProxyImage proxyImage = new ProxyImage("123.png");
+        proxyImage.display();
+    }
+
 }
